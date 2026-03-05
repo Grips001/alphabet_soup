@@ -30,12 +30,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Tick engine runs at a fixed timestep independent of render framerate (visible via a tick counter or debug overlay)
   4. Pushing to GitHub triggers a build and deploys to a live Vercel URL
   5. CI runs type-check and tests on every push
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
-- [ ] 01-03: TBD
+- [ ] 01-01-PLAN.md -- Project scaffold, TickEngine (TDD), Grid data model (TDD)
+- [ ] 01-02-PLAN.md -- Grid renderer, camera controller, scene wiring, debug overlay
+- [ ] 01-03-PLAN.md -- CI/CD pipeline, Vercel deployment, visual verification
 
 ### Phase 2: Resource Production
 **Goal**: Players can place quarries and belts on the grid, see letters being produced and physically moving along belt paths
