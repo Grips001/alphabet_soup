@@ -1,7 +1,7 @@
 # Requirements: AlphabetSoup
 
 **Defined:** 2026-03-04
-**Core Value:** The factory automation loop — placing machines, routing letters on belts, and watching assemblers produce words — must feel satisfying and work reliably.
+**Core Value:** The factory automation loop -- placing machines, routing letters on belts, and watching assemblers produce words -- must feel satisfying and work reliably.
 
 ## v1 Requirements
 
@@ -106,39 +106,39 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SIM-01 | — | Pending |
-| SIM-02 | — | Pending |
-| GRID-01 | — | Pending |
-| GRID-02 | — | Pending |
-| GRID-03 | — | Pending |
-| GRID-04 | — | Pending |
-| TRNS-01 | — | Pending |
-| TRNS-02 | — | Pending |
-| TRNS-03 | — | Pending |
-| TRNS-04 | — | Pending |
-| TRNS-05 | — | Pending |
-| PROD-01 | — | Pending |
-| PROD-02 | — | Pending |
-| PROD-03 | — | Pending |
-| WORD-01 | — | Pending |
-| WORD-02 | — | Pending |
-| WORD-03 | — | Pending |
-| PROG-01 | — | Pending |
-| PROG-02 | — | Pending |
-| PROG-03 | — | Pending |
-| PROG-04 | — | Pending |
-| PROG-05 | — | Pending |
-| UI-01 | — | Pending |
-| UI-02 | — | Pending |
-| UI-03 | — | Pending |
-| INFRA-01 | — | Pending |
-| INFRA-02 | — | Pending |
+| SIM-01 | Phase 1: Foundation | Pending |
+| SIM-02 | Phase 4: Progression & Economy | Pending |
+| GRID-01 | Phase 1: Foundation | Pending |
+| GRID-02 | Phase 2: Resource Production | Pending |
+| GRID-03 | Phase 2: Resource Production | Pending |
+| GRID-04 | Phase 1: Foundation | Pending |
+| TRNS-01 | Phase 2: Resource Production | Pending |
+| TRNS-02 | Phase 2: Resource Production | Pending |
+| TRNS-03 | Phase 3: Factory Loop | Pending |
+| TRNS-04 | Phase 3: Factory Loop | Pending |
+| TRNS-05 | Phase 3: Factory Loop | Pending |
+| PROD-01 | Phase 2: Resource Production | Pending |
+| PROD-02 | Phase 3: Factory Loop | Pending |
+| PROD-03 | Phase 3: Factory Loop | Pending |
+| WORD-01 | Phase 3: Factory Loop | Pending |
+| WORD-02 | Phase 3: Factory Loop | Pending |
+| WORD-03 | Phase 4: Progression & Economy | Pending |
+| PROG-01 | Phase 4: Progression & Economy | Pending |
+| PROG-02 | Phase 4: Progression & Economy | Pending |
+| PROG-03 | Phase 4: Progression & Economy | Pending |
+| PROG-04 | Phase 4: Progression & Economy | Pending |
+| PROG-05 | Phase 4: Progression & Economy | Pending |
+| UI-01 | Phase 5: Persistence & Polish | Pending |
+| UI-02 | Phase 5: Persistence & Polish | Pending |
+| UI-03 | Phase 5: Persistence & Polish | Pending |
+| INFRA-01 | Phase 1: Foundation | Pending |
+| INFRA-02 | Phase 1: Foundation | Pending |
 
 **Coverage:**
 - v1 requirements: 27 total
-- Mapped to phases: 0
-- Unmapped: 27
+- Mapped to phases: 27
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-04*
-*Last updated: 2026-03-04 after initial definition*
+*Last updated: 2026-03-04 after roadmap creation*
