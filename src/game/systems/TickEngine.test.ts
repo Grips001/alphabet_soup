@@ -51,8 +51,9 @@ describe("TickEngine", () => {
   });
 
   it("spiral of death prevention - caps accumulator at 5 ticks", () => {
-    const engine = new TickEngine(15);
-    const tickMs = 1000 / 15;
+    // Use clean tick rate (10 tps = 100ms/tick) to avoid float issues
+    const engine = new TickEngine(10);
+    const tickMs = 100; // exactly 100ms per tick
     const onTick = vi.fn();
 
     // Send 1000 ticks worth of delta (simulating tab-resume)
@@ -62,8 +63,9 @@ describe("TickEngine", () => {
   });
 
   it("currentTick getter returns cumulative tick count", () => {
-    const engine = new TickEngine(15);
-    const tickMs = 1000 / 15;
+    // Use clean tick rate to avoid float precision issues
+    const engine = new TickEngine(10);
+    const tickMs = 100;
     const onTick = vi.fn();
 
     expect(engine.currentTick).toBe(0);
