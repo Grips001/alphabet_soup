@@ -12,7 +12,13 @@ export const gameConfig: Phaser.Types.Core.GameConfig = {
   scale: {
     mode: Phaser.Scale.RESIZE,
     autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: window.innerWidth,
+    height: window.innerHeight,
   },
-  backgroundColor: "#2d2a23",
+  backgroundColor: "#2e3d36",
+  input: {
+    keyboard: true,
+    mouse: true,
+  },
   scene: [BootScene, GameScene],
 };

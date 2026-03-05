@@ -5,6 +5,7 @@ import {
   CAMERA_MAX_SPEED,
   WORLD_SIZE,
   ZOOM_LERP,
+  ZOOM_STEP,
 } from "../constants";
 import { clampZoom } from "./camera-utils";
 
@@ -13,7 +14,6 @@ import { clampZoom } from "./camera-utils";
  * Used to merge WASD and arrow keys into SmoothedKeyControl.
  */
 class CompositeKey {
-  readonly isDown: boolean = false;
   private keyA: Phaser.Input.Keyboard.Key;
   private keyB: Phaser.Input.Keyboard.Key;
 
@@ -22,24 +22,21 @@ class CompositeKey {
     this.keyB = b;
   }
 
-  // SmoothedKeyControl reads .isDown each frame via getter
-  get isDownGetter(): boolean {
+  get isDown(): boolean {
     return this.keyA.isDown || this.keyB.isDown;
   }
 }
-
-// Patch prototype to make isDown a getter
-Object.defineProperty(CompositeKey.prototype, "isDown", {
-  get(this: CompositeKey) {
-    return this.isDownGetter;
-  },
-  configurable: true,
-});
 
 export class CameraController {
   private scene: Phaser.Scene;
   private controls: Phaser.Cameras.Controls.SmoothedKeyControl;
   private targetZoom: number;
+
+  // Zoom-toward-cursor: world point captured at wheel time
+  private zoomAnchorWorldX = 0;
+  private zoomAnchorWorldY = 0;
+  private zoomAnchorScreenX = 0;
+  private zoomAnchorScreenY = 0;
 
   // Middle-click drag state
   private isDragging = false;
@@ -107,7 +104,17 @@ export class CameraController {
   }
 
   private handleZoom(deltaY: number): void {
-    const zoomDelta = deltaY > 0 ? -0.1 : 0.1;
+    const camera = this.scene.cameras.main;
+    const pointer = this.scene.input.activePointer;
+
+    // Capture the world point under cursor BEFORE zoom changes
+    const worldPoint = camera.getWorldPoint(pointer.x, pointer.y);
+    this.zoomAnchorWorldX = worldPoint.x;
+    this.zoomAnchorWorldY = worldPoint.y;
+    this.zoomAnchorScreenX = pointer.x;
+    this.zoomAnchorScreenY = pointer.y;
+
+    const zoomDelta = deltaY > 0 ? -ZOOM_STEP : ZOOM_STEP;
     this.targetZoom = clampZoom(this.targetZoom + zoomDelta);
   }
 
@@ -158,20 +165,19 @@ export class CameraController {
   update(delta: number): void {
     this.controls.update(delta);
 
-    // Lerp zoom toward target for smoothness
+    // Lerp zoom toward target, anchored to the world point captured at wheel time
     const camera = this.scene.cameras.main;
     if (Math.abs(camera.zoom - this.targetZoom) > 0.001) {
-      // Get world point under cursor before zoom change
-      const pointer = this.scene.input.activePointer;
-      const worldBefore = camera.getWorldPoint(pointer.x, pointer.y);
-
-      // Lerp zoom
+      // Apply lerped zoom
       camera.zoom += (this.targetZoom - camera.zoom) * ZOOM_LERP;
 
-      // Adjust scroll to keep world point under cursor stable
-      const worldAfter = camera.getWorldPoint(pointer.x, pointer.y);
-      camera.scrollX += worldBefore.x - worldAfter.x;
-      camera.scrollY += worldBefore.y - worldAfter.y;
+      // Adjust scroll so the anchor world point stays under its original screen position
+      const current = camera.getWorldPoint(
+        this.zoomAnchorScreenX,
+        this.zoomAnchorScreenY,
+      );
+      camera.scrollX += this.zoomAnchorWorldX - current.x;
+      camera.scrollY += this.zoomAnchorWorldY - current.y;
     }
   }
 }

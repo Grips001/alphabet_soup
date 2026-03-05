@@ -28,7 +28,7 @@ export class GridRenderer {
     heightTiles: number,
   ): void {
     const graphics = scene.add.graphics();
-    graphics.lineStyle(1, 0xffffff, 0.08);
+    graphics.lineStyle(1, 0x000000, 0.12);
 
     const totalWidth = widthTiles * TILE_SIZE;
     const totalHeight = heightTiles * TILE_SIZE;

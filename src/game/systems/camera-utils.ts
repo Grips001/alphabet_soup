@@ -1,4 +1,4 @@
-import { ZOOM_MAX, ZOOM_MIN } from "../constants";
+import { ZOOM_MAX, ZOOM_MIN, ZOOM_STEP } from "../constants";
 
 /** Clamp zoom value to allowed range. */
 export function clampZoom(zoom: number): number {
@@ -7,5 +7,5 @@ export function clampZoom(zoom: number): number {
 
 /** Calculate zoom delta from wheel event deltaY. */
 export function zoomDeltaFromWheel(deltaY: number): number {
-  return deltaY > 0 ? -0.1 : 0.1;
+  return deltaY > 0 ? -ZOOM_STEP : ZOOM_STEP;
 }

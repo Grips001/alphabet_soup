@@ -4,6 +4,7 @@ import { TILE_SIZE } from "../constants";
 export class DebugOverlay {
   private text: Phaser.GameObjects.Text;
   private visible = false;
+  private uiCamera: Phaser.Cameras.Scene2D.Camera;
 
   constructor(scene: Phaser.Scene) {
     this.text = scene.add.text(8, 8, "", {
@@ -14,15 +15,32 @@ export class DebugOverlay {
       padding: { x: 6, y: 4 },
     });
 
-    this.text.setScrollFactor(0);
     this.text.setDepth(1000);
     this.text.setVisible(false);
 
-    // F3 toggles visibility
-    scene.input.keyboard!.on("keydown-F3", () => {
+    // Dedicated UI camera that never scrolls or zooms
+    this.uiCamera = scene.cameras.add(0, 0, scene.scale.width, scene.scale.height);
+    this.uiCamera.setScroll(0, 0);
+
+    // Main camera ignores UI text; UI camera only sees UI text
+    scene.cameras.main.ignore(this.text);
+    this.uiCamera.ignore(scene.children.getAll().filter((obj) => obj !== this.text));
+
+    // Backtick toggles visibility
+    scene.input.keyboard!.on("keydown-BACKTICK", () => {
       this.visible = !this.visible;
       this.text.setVisible(this.visible);
     });
+
+    // Keep UI camera sized to window
+    scene.scale.on("resize", (gameSize: Phaser.Structs.Size) => {
+      this.uiCamera.setSize(gameSize.width, gameSize.height);
+    });
+  }
+
+  /** Call when new game objects are added so the UI camera ignores them. */
+  ignoreOnUiCamera(obj: Phaser.GameObjects.GameObject): void {
+    this.uiCamera.ignore(obj);
   }
 
   update(scene: Phaser.Scene, tickCount: number): void {
