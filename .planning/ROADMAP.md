@@ -12,7 +12,7 @@ AlphabetSoup goes from empty project to playable factory-sim-meets-word-game in 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Simulation engine, grid world, camera, and CI/CD pipeline
+- [x] **Phase 1: Foundation** - Simulation engine, grid world, camera, and CI/CD pipeline
 - [ ] **Phase 2: Resource Production** - Quarries produce letters, belts transport them, building placement works
 - [ ] **Phase 3: Factory Loop** - Inserters, assemblers, and word recipes complete the letter-to-word pipeline
 - [ ] **Phase 4: Progression & Economy** - Currency from words, tech tree, hub goals, and game speed controls
@@ -33,9 +33,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Project scaffold, TickEngine (TDD), Grid data model (TDD)
-- [ ] 01-02-PLAN.md -- Grid renderer, camera controller, scene wiring, debug overlay
-- [ ] 01-03-PLAN.md -- CI/CD pipeline, Vercel deployment, visual verification
+- [x] 01-01-PLAN.md -- Project scaffold, TickEngine (TDD), Grid data model (TDD)
+- [x] 01-02-PLAN.md -- Grid renderer, camera controller, scene wiring, debug overlay
+- [x] 01-03-PLAN.md -- CI/CD pipeline, Vercel deployment, visual verification
 
 ### Phase 2: Resource Production
 **Goal**: Players can place quarries and belts on the grid, see letters being produced and physically moving along belt paths
@@ -107,7 +107,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete | 2026-03-05 |
 | 2. Resource Production | 0/3 | Not started | - |
 | 3. Factory Loop | 0/3 | Not started | - |
 | 4. Progression & Economy | 0/2 | Not started | - |

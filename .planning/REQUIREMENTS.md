@@ -56,7 +56,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Infrastructure
 
 - [x] **INFRA-01**: Project builds with Vite and deploys to Vercel via GitHub integration
-- [ ] **INFRA-02**: CI pipeline runs type-check and tests on push
+- [x] **INFRA-02**: CI pipeline runs type-check and tests on push
 
 ## v2 Requirements
 
@@ -132,7 +132,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UI-02 | Phase 5: Persistence & Polish | Pending |
 | UI-03 | Phase 5: Persistence & Polish | Pending |
 | INFRA-01 | Phase 1: Foundation | Complete |
-| INFRA-02 | Phase 1: Foundation | Pending |
+| INFRA-02 | Phase 1: Foundation | Complete |
 
 **Coverage:**
 - v1 requirements: 27 total
