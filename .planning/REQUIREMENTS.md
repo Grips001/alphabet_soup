@@ -9,12 +9,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Simulation
 
-- [ ] **SIM-01**: Game runs on a fixed-timestep tick engine decoupled from render framerate
+- [x] **SIM-01**: Game runs on a fixed-timestep tick engine decoupled from render framerate
 - [ ] **SIM-02**: Player can pause, play at 1x, and fast-forward at 2x speed
 
 ### Grid & World
 
-- [ ] **GRID-01**: World is a 2D tile grid where buildings snap to grid positions
+- [x] **GRID-01**: World is a 2D tile grid where buildings snap to grid positions
 - [ ] **GRID-02**: Player can place buildings with ghost preview showing validity
 - [ ] **GRID-03**: Player can demolish placed buildings
 - [ ] **GRID-04**: Player can pan camera with mouse/keyboard and zoom with scroll wheel
@@ -55,7 +55,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFRA-01**: Project builds with Vite and deploys to Vercel via GitHub integration
+- [x] **INFRA-01**: Project builds with Vite and deploys to Vercel via GitHub integration
 - [ ] **INFRA-02**: CI pipeline runs type-check and tests on push
 
 ## v2 Requirements
@@ -106,9 +106,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SIM-01 | Phase 1: Foundation | Pending |
+| SIM-01 | Phase 1: Foundation | Complete |
 | SIM-02 | Phase 4: Progression & Economy | Pending |
-| GRID-01 | Phase 1: Foundation | Pending |
+| GRID-01 | Phase 1: Foundation | Complete |
 | GRID-02 | Phase 2: Resource Production | Pending |
 | GRID-03 | Phase 2: Resource Production | Pending |
 | GRID-04 | Phase 1: Foundation | Pending |
@@ -131,7 +131,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | UI-01 | Phase 5: Persistence & Polish | Pending |
 | UI-02 | Phase 5: Persistence & Polish | Pending |
 | UI-03 | Phase 5: Persistence & Polish | Pending |
-| INFRA-01 | Phase 1: Foundation | Pending |
+| INFRA-01 | Phase 1: Foundation | Complete |
 | INFRA-02 | Phase 1: Foundation | Pending |
 
 **Coverage:**
