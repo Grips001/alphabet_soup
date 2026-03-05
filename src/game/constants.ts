@@ -1,0 +1,10 @@
+export const TILE_SIZE = 32;
+export const WORLD_TILES = 64;
+export const WORLD_SIZE = TILE_SIZE * WORLD_TILES; // 2048
+export const TICK_RATE = 15; // ticks per second
+export const ZOOM_MIN = 0.5;
+export const ZOOM_MAX = 3.0;
+export const CAMERA_ACCELERATION = 0.08;
+export const CAMERA_DRAG = 0.003;
+export const CAMERA_MAX_SPEED = 0.5;
+export const ZOOM_LERP = 0.1;
