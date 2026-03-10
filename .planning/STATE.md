@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-10T01:44:14.327Z"
+stopped_at: Completed 02-01 entity data models and BuildingSystem
+last_updated: "2026-03-10T18:12:42.537Z"
 last_activity: 2026-03-05 -- Completed 01-03 CI/CD pipeline and Vercel deployment
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 7
+  completed_plans: 4
   percent: 100
 ---
 
@@ -50,6 +50,7 @@ Progress: [██████████] 100% (Phase 1)
 - Trend: Steady (01-03 longer due to deployment + human verification)
 
 *Updated after each plan completion*
+| Phase 02-resource-production P01 | 2 | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,9 @@ Recent decisions affecting current work:
 - [01-02]: Zoom-toward-cursor uses lerped zoom with world-point correction each frame
 - [01-03]: CI uses bun install --frozen-lockfile for reproducible builds
 - [01-03]: Vercel production deployment with GitHub integration for auto-deploy on push
+- [Phase 02-01]: Building interface uses occupiedTiles() + type string for polymorphic multi-tile registry
+- [Phase 02-01]: computeBeltVariant uses static string-keyed lookup table for O(1) variant resolution
+- [Phase 02-01]: LETTER_COLORS uses 0xRRGGBB hex integers to match Phaser native color format
 
 ### Pending Todos
 
@@ -81,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-10T01:44:14.323Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-resource-production/02-CONTEXT.md
+Last session: 2026-03-10T18:12:42.533Z
+Stopped at: Completed 02-01 entity data models and BuildingSystem
+Resume file: None

@@ -15,8 +15,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Grid & World
 
 - [x] **GRID-01**: World is a 2D tile grid where buildings snap to grid positions
-- [ ] **GRID-02**: Player can place buildings with ghost preview showing validity
-- [ ] **GRID-03**: Player can demolish placed buildings
+- [x] **GRID-02**: Player can place buildings with ghost preview showing validity
+- [x] **GRID-03**: Player can demolish placed buildings
 - [x] **GRID-04**: Player can pan camera with mouse/keyboard and zoom with scroll wheel
 
 ### Transport
@@ -109,8 +109,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SIM-01 | Phase 1: Foundation | Complete |
 | SIM-02 | Phase 4: Progression & Economy | Pending |
 | GRID-01 | Phase 1: Foundation | Complete |
-| GRID-02 | Phase 2: Resource Production | Pending |
-| GRID-03 | Phase 2: Resource Production | Pending |
+| GRID-02 | Phase 2: Resource Production | Complete |
+| GRID-03 | Phase 2: Resource Production | Complete |
 | GRID-04 | Phase 1: Foundation | Complete |
 | TRNS-01 | Phase 2: Resource Production | Pending |
 | TRNS-02 | Phase 2: Resource Production | Pending |
