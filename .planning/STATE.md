@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-03 Rendering layer for quarries, belts, and items
-last_updated: "2026-03-10T18:27:57.901Z"
+stopped_at: "Checkpoint: visual verification of Phase 2 complete factory loop (02-04 Task 3)"
+last_updated: "2026-03-10T18:35:14.390Z"
 last_activity: 2026-03-10 -- Completed 02-02 simulation systems (BeltSystem + QuarrySystem)
 progress:
   total_phases: 5
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
   percent: 71
 ---
 
@@ -54,6 +54,7 @@ Progress: [███████░░░] 71% (5/7 plans complete)
 | Phase 02-resource-production P01 | 2 | 2 tasks | 10 files |
 | Phase 02-resource-production P02 | 6 | 2 tasks | 5 files |
 | Phase 02-resource-production P03 | 3 | 3 tasks | 5 files |
+| Phase 02-resource-production P04 | 3 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,8 @@ Recent decisions affecting current work:
 - [Phase 02-03]: QuarryRenderer is static (no update loop) — quarries never move, constructed once at scene start
 - [Phase 02-03]: BeltRenderer uses explicit addBelt/removeBelt calls matching PlacementSystem pattern for Plan 04
 - [Phase 02-03]: BeltSystem.getAllBelts() added as public API to avoid any-cast in ItemRenderer
+- [Phase 02-resource-production]: PlacementSystem uses unified dragPath for both Belt and Demolish tools — single endDrag() return type
+- [Phase 02-resource-production]: Toolbar buttons toggle behavior — clicking active tool again deselects it
 
 ### Pending Todos
 
@@ -94,6 +97,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-10T18:27:57.897Z
-Stopped at: Completed 02-03 Rendering layer for quarries, belts, and items
+Last session: 2026-03-10T18:35:14.386Z
+Stopped at: Checkpoint: visual verification of Phase 2 complete factory loop (02-04 Task 3)
 Resume file: None

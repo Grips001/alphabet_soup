@@ -13,7 +13,7 @@ AlphabetSoup goes from empty project to playable factory-sim-meets-word-game in 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Simulation engine, grid world, camera, and CI/CD pipeline
-- [ ] **Phase 2: Resource Production** - Quarries produce letters, belts transport them, building placement works
+- [x] **Phase 2: Resource Production** - Quarries produce letters, belts transport them, building placement works (completed 2026-03-10)
 - [ ] **Phase 3: Factory Loop** - Inserters, assemblers, and word recipes complete the letter-to-word pipeline
 - [ ] **Phase 4: Progression & Economy** - Currency from words, tech tree, hub goals, and game speed controls
 - [ ] **Phase 5: Persistence & Polish** - Save/load, HUD, and game state versioning
@@ -109,7 +109,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-03-05 |
-| 2. Resource Production | 3/4 | In Progress|  |
+| 2. Resource Production | 4/4 | Complete   | 2026-03-10 |
 | 3. Factory Loop | 0/3 | Not started | - |
 | 4. Progression & Economy | 0/2 | Not started | - |
 | 5. Persistence & Polish | 0/1 | Not started | - |
