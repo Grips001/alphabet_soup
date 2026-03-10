@@ -47,12 +47,13 @@ Plans:
   3. Player can see a ghost preview when placing buildings, showing valid/invalid positions
   4. Player can demolish any placed building
   5. Letter items visually travel along belt paths from quarry output toward the belt end
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md -- Entity data models (Quarry, Belt, LetterItem), BuildingSystem, constants
+- [ ] 02-02-PLAN.md -- BeltSystem item transport, QuarrySystem production with backpressure
+- [ ] 02-03-PLAN.md -- Renderers (quarry, belt, item) and GameScene wiring
+- [ ] 02-04-PLAN.md -- PlacementSystem, toolbar UI, ghost preview, demolish, visual verification
 
 ### Phase 3: Factory Loop
 **Goal**: The complete production chain works -- inserters pull letters off belts into assemblers, assemblers consume the correct letters and output completed word items
@@ -108,7 +109,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-03-05 |
-| 2. Resource Production | 0/3 | Not started | - |
+| 2. Resource Production | 0/4 | Not started | - |
 | 3. Factory Loop | 0/3 | Not started | - |
 | 4. Progression & Economy | 0/2 | Not started | - |
 | 5. Persistence & Polish | 0/1 | Not started | - |
