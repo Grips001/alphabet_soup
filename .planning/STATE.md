@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: "Checkpoint: visual verification of Phase 2 complete factory loop (02-04 Task 3)"
-last_updated: "2026-03-10T18:35:14.390Z"
-last_activity: 2026-03-10 -- Completed 02-02 simulation systems (BeltSystem + QuarrySystem)
+status: ready
+stopped_at: "Completed 02-04-PLAN.md — Phase 2 Resource Production complete"
+last_updated: "2026-03-10T19:35:14.000Z"
+last_activity: 2026-03-10 -- Completed 02-04 placement UX (ToolbarUI, GhostRenderer, PlacementSystem)
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
-  percent: 71
+  total_plans: 8
+  completed_plans: 8
+  percent: 100
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-04)
 
 ## Current Position
 
-Phase: 2 of 5 (Resource Production) -- In Progress
-Plan: 2 of 4 in current phase
-Status: In Progress
-Last activity: 2026-03-10 -- Completed 02-02 simulation systems (BeltSystem + QuarrySystem)
+Phase: 2 of 5 (Resource Production) -- Complete
+Plan: 4 of 4 in current phase (all plans complete)
+Status: Phase 2 Complete — Ready for Phase 3
+Last activity: 2026-03-10 -- Completed 02-04 placement UX (ToolbarUI, GhostRenderer, PlacementSystem) — all 11 visual criteria verified
 
-Progress: [███████░░░] 71% (5/7 plans complete)
+Progress: [██████████] 100% (8/8 Phase 2 plans complete)
 
 ## Performance Metrics
 
@@ -85,6 +85,8 @@ Recent decisions affecting current work:
 - [Phase 02-03]: BeltSystem.getAllBelts() added as public API to avoid any-cast in ItemRenderer
 - [Phase 02-resource-production]: PlacementSystem uses unified dragPath for both Belt and Demolish tools — single endDrag() return type
 - [Phase 02-resource-production]: Toolbar buttons toggle behavior — clicking active tool again deselects it
+- [02-04]: ToolbarUI accesses UI camera via cameras.cameras[1] (DebugOverlay creates it as second camera)
+- [02-04]: Belt validity filter applied at placement commit, not during ghost preview — ghost shows red but path is filtered on place
 
 ### Pending Todos
 
@@ -97,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-10T18:35:14.386Z
-Stopped at: Checkpoint: visual verification of Phase 2 complete factory loop (02-04 Task 3)
+Last session: 2026-03-10T19:35:14.000Z
+Stopped at: Completed 02-04-PLAN.md — Phase 2 Resource Production complete, ready for Phase 3
 Resume file: None
