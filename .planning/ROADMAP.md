@@ -109,7 +109,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-03-05 |
-| 2. Resource Production | 2/4 | In Progress|  |
+| 2. Resource Production | 3/4 | In Progress|  |
 | 3. Factory Loop | 0/3 | Not started | - |
 | 4. Progression & Economy | 0/2 | Not started | - |
 | 5. Persistence & Polish | 0/1 | Not started | - |
