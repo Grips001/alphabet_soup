@@ -25,6 +25,11 @@ const VARIANT_LOOKUP: Record<string, BeltVariant> = {
   [`${BeltDirection.North},${BeltDirection.West}`]: BeltVariant.CornerNW,
   [`${BeltDirection.South},${BeltDirection.East}`]: BeltVariant.CornerSE,
   [`${BeltDirection.South},${BeltDirection.West}`]: BeltVariant.CornerSW,
+  // East/West input corners (items traveling horizontally then turning)
+  [`${BeltDirection.East},${BeltDirection.North}`]: BeltVariant.CornerNE,
+  [`${BeltDirection.East},${BeltDirection.South}`]: BeltVariant.CornerSE,
+  [`${BeltDirection.West},${BeltDirection.North}`]: BeltVariant.CornerNW,
+  [`${BeltDirection.West},${BeltDirection.South}`]: BeltVariant.CornerSW,
   // Cross-axis straights (e.g. N->S means passing through)
   [`${BeltDirection.North},${BeltDirection.South}`]: BeltVariant.StraightNS,
   [`${BeltDirection.South},${BeltDirection.North}`]: BeltVariant.StraightNS,
