@@ -21,15 +21,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Transport
 
-- [ ] **TRNS-01**: Player can place conveyor belts that move letter items in a direction
-- [ ] **TRNS-02**: Belts support corners and auto-connect when placed in L-shapes
+- [x] **TRNS-01**: Player can place conveyor belts that move letter items in a direction
+- [x] **TRNS-02**: Belts support corners and auto-connect when placed in L-shapes
 - [ ] **TRNS-03**: Player can place inserters that transfer items between belts and machines
 - [ ] **TRNS-04**: Player can place belt splitters that divide item flow
 - [ ] **TRNS-05**: Player can place underground belts that tunnel under obstacles
 
 ### Production
 
-- [ ] **PROD-01**: Letter quarries at fixed map positions produce a specific letter over time
+- [x] **PROD-01**: Letter quarries at fixed map positions produce a specific letter over time
 - [ ] **PROD-02**: Player can place assembler machines and assign a word recipe
 - [ ] **PROD-03**: Assemblers consume the correct letters and output a completed word item
 
@@ -112,12 +112,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GRID-02 | Phase 2: Resource Production | Complete |
 | GRID-03 | Phase 2: Resource Production | Complete |
 | GRID-04 | Phase 1: Foundation | Complete |
-| TRNS-01 | Phase 2: Resource Production | Pending |
-| TRNS-02 | Phase 2: Resource Production | Pending |
+| TRNS-01 | Phase 2: Resource Production | Complete |
+| TRNS-02 | Phase 2: Resource Production | Complete |
 | TRNS-03 | Phase 3: Factory Loop | Pending |
 | TRNS-04 | Phase 3: Factory Loop | Pending |
 | TRNS-05 | Phase 3: Factory Loop | Pending |
-| PROD-01 | Phase 2: Resource Production | Pending |
+| PROD-01 | Phase 2: Resource Production | Complete |
 | PROD-02 | Phase 3: Factory Loop | Pending |
 | PROD-03 | Phase 3: Factory Loop | Pending |
 | WORD-01 | Phase 3: Factory Loop | Pending |

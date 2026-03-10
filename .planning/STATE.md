@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Completed 02-01 entity data models and BuildingSystem
-last_updated: "2026-03-10T18:12:42.537Z"
-last_activity: 2026-03-05 -- Completed 01-03 CI/CD pipeline and Vercel deployment
+status: in_progress
+stopped_at: Completed 02-02 BeltSystem and QuarrySystem simulation systems
+last_updated: "2026-03-10T18:19:26Z"
+last_activity: 2026-03-10 -- Completed 02-02 simulation systems (BeltSystem + QuarrySystem)
 progress:
   total_phases: 5
   completed_phases: 1
   total_plans: 7
-  completed_plans: 4
-  percent: 100
+  completed_plans: 5
+  percent: 71
 ---
 
 # Project State
@@ -21,36 +21,38 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-04)
 
 **Core value:** The factory automation loop -- placing machines, routing letters on belts, and watching assemblers produce words -- must feel satisfying and work reliably.
-**Current focus:** Phase 1: Foundation
+**Current focus:** Phase 2: Resource Production
 
 ## Current Position
 
-Phase: 1 of 5 (Foundation) -- COMPLETE
-Plan: 3 of 3 in current phase
-Status: Phase Complete
-Last activity: 2026-03-05 -- Completed 01-03 CI/CD pipeline and Vercel deployment
+Phase: 2 of 5 (Resource Production) -- In Progress
+Plan: 2 of 4 in current phase
+Status: In Progress
+Last activity: 2026-03-10 -- Completed 02-02 simulation systems (BeltSystem + QuarrySystem)
 
-Progress: [██████████] 100% (Phase 1)
+Progress: [███████░░░] 71% (5/7 plans complete)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 11min
-- Total execution time: 0.6 hours
+- Total plans completed: 5
+- Average duration: 9min
+- Total execution time: 0.7 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3 | 34min | 11min |
+| 02-resource-production | 2 | 16min | 8min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (3min), 01-02 (3min), 01-03 (28min)
-- Trend: Steady (01-03 longer due to deployment + human verification)
+- Last 5 plans: 01-02 (3min), 01-03 (28min), 02-01 (10min), 02-02 (6min)
+- Trend: Fast -- simulation plans running quick with TDD
 
 *Updated after each plan completion*
 | Phase 02-resource-production P01 | 2 | 2 tasks | 10 files |
+| Phase 02-resource-production P02 | 6 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -73,6 +75,9 @@ Recent decisions affecting current work:
 - [Phase 02-01]: Building interface uses occupiedTiles() + type string for polymorphic multi-tile registry
 - [Phase 02-01]: computeBeltVariant uses static string-keyed lookup table for O(1) variant resolution
 - [Phase 02-01]: LETTER_COLORS uses 0xRRGGBB hex integers to match Phaser native color format
+- [Phase 02-02]: BeltSystem processes belts farthest-downstream-first via distance-from-end sort (prevents double-advance)
+- [Phase 02-02]: QuarrySystem updates backpressured flag unconditionally each tick before canProduce() check
+- [Phase 02-02]: Belt.ts VARIANT_LOOKUP extended with E/W input corners — all 8 corner orientations now covered
 
 ### Pending Todos
 
@@ -85,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-10T18:12:42.533Z
-Stopped at: Completed 02-01 entity data models and BuildingSystem
+Last session: 2026-03-10T18:19:26Z
+Stopped at: Completed 02-02 BeltSystem and QuarrySystem simulation systems
 Resume file: None
