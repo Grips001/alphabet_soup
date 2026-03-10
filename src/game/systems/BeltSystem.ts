@@ -51,6 +51,10 @@ export class BeltSystem {
     return this.belts.get(tileKey(x, y)) ?? null;
   }
 
+  getAllBelts(): readonly Belt[] {
+    return [...this.belts.values()];
+  }
+
   getNextBelt(belt: Belt): Belt | null {
     const { dx, dy } = directionOffset(belt.direction);
     return this.getBeltAt(belt.tileX + dx, belt.tileY + dy);
