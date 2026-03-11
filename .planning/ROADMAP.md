@@ -65,12 +65,14 @@ Plans:
   3. Player can place belt splitters that divide item flow between two output belts
   4. Player can place underground belts that tunnel under obstacles and resurface
   5. A curated word dictionary is available with words organized by tier (3-letter, 4-letter, 5-letter)
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
-- [ ] 03-03: TBD
+- [ ] 03-01-PLAN.md -- Entity data models (Inserter, Assembler, Splitter, UndergroundBelt, WordItem), BeltItem type, word dictionary
+- [ ] 03-02-PLAN.md -- InserterSystem (smart filter, transfer logic) and AssemblerSystem (ingredient collection, assembly timer)
+- [ ] 03-03-PLAN.md -- SplitterSystem (auto-mode split/merge/balance) and UndergroundBeltSystem (tick-delayed buffer)
+- [ ] 03-04-PLAN.md -- PlacementSystem extensions (rotation, multi-tile, two-click), ToolbarUI (5 tools), GhostRenderer (multi-tile)
+- [ ] 03-05-PLAN.md -- Renderers (inserter, assembler, splitter, underground), GameScene wiring, visual verification
 
 ### Phase 4: Progression & Economy
 **Goal**: Completed words have value -- routing them to a hub earns currency, currency buys infrastructure, and a tech tree gates access to harder word recipes
@@ -110,6 +112,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-03-05 |
 | 2. Resource Production | 4/4 | Complete   | 2026-03-10 |
-| 3. Factory Loop | 0/3 | Not started | - |
+| 3. Factory Loop | 0/5 | Not started | - |
 | 4. Progression & Economy | 0/2 | Not started | - |
 | 5. Persistence & Polish | 0/1 | Not started | - |
